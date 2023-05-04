@@ -5,11 +5,11 @@ from typing import List
 PROJECT_NAME='Machine Learning End To End Project'
 VERSION="0.0.1"
 AUTHOR="Nitesh Pandey"
-DESCRIPTION="This is complete ened to end machine learning project"
+DESCRIPTION="This is complete end to end machine learning project"
 
 
 HYPHEN_E_DOT="-e ."
-def get_requirements_list()->List(str):
+def get_requirements_list():
     with open('requirements.txt','r') as req_file:
         req_list=req_file.readlines()
         req_list=[req_name.replace("\n","") for req_name in req_list]
@@ -23,5 +23,7 @@ setup(
     author=AUTHOR,
     version=VERSION,
     description=DESCRIPTION,
-    author_email='niteshpandeyofficial@gmail.com'
+    author_email='niteshpandeyofficial@gmail.com',
+    packages=find_packages(), 
+    install_requires=get_requirements_list()
     )
