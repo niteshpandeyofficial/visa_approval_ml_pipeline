@@ -61,6 +61,19 @@ you would activate the virtualenv like this:
 ```bash
 .venv\Scripts\activate.bat
 ```
+if you are getting below error at the time of activating virtual environment then run below mention code to solve the error.
+
+```bash
+D:\End_to_End_ML_Project\Project_ML_Pipeline\visa_approval_ml_pipeline\.venv\Scripts\Activate.ps1 cannot be loaded 
+because running scripts is disabled on this system. For more information, see about_Execution_Policies at 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+```
+
+```bash
+solution
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+```
+
 Once the virtualenv is activated, you can install the required dependencies.
 ```bash
 pip install -r requirements.txt
