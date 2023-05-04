@@ -25,7 +25,7 @@ list_of_file=[
     f"{project_name}/utils/__init__.py",
     f"config/config.yaml",
     f"setup.py",
-    f"main.py"
+    f"main.py",
     f"requirements.txt"
 ]
 
